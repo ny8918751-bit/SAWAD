@@ -4,41 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAWAD Bakery</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
-
 <style>
-  <script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '69f1138afd7b7157414fa824' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          }
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script> <script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '69f1138afd7b7157414fa824' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          }
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
 body { margin:0; font-family:Poppins; background:#f5e6d3; }
 
 /* HERO */
@@ -131,16 +98,16 @@ button {
 
 <!-- HERO -->
 <section class="hero">
-<h1>SAWAD</h1>
-<p>Freshly Baked Happiness</p>
+  <h1>SAWAD</h1>
+  <p>Freshly Baked Happiness</p>
 </section>
 
 <!-- FILTER -->
 <div class="filters">
-<button onclick="filterItems('all')">All</button>
-<button onclick="filterItems('cake')">Cakes</button>
-<button onclick="filterItems('bread')">Bread</button>
-<button onclick="filterItems('snack')">Snacks</button>
+  <button onclick="filterItems('all')">All</button>
+  <button onclick="filterItems('cake')">Cakes</button>
+  <button onclick="filterItems('bread')">Bread</button>
+  <button onclick="filterItems('snack')">Snacks</button>
 </div>
 
 <!-- PRODUCTS -->
@@ -148,78 +115,71 @@ button {
 
 <!-- CART -->
 <div class="cart-box">
-<h3>Cart</h3>
-<ul id="cart-items"></ul>
-<p>Total: ₹<span id="total">0</span></p>
-<button onclick="sendToWhatsApp()">Order</button>
+  <h3>Cart</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+  <button onclick="sendToWhatsApp()">Order</button>
 </div>
 
 <!-- ABOUT -->
 <section class="about fade">
-<h2>Our Story</h2>
-<p style="max-width:800px;margin:auto;">
-SAWAD was born in Panipat with one mission — to deliver fresh, premium bakery products.
-From cakes to breads, everything is baked daily with care and quality ingredients.
-</p>
-<p style="max-width:800px;margin:20px auto;">
-We believe food is not just taste, it is an experience. Every bite should feel special.
-</p>
-<h3 style="color:#6b3e26;">Freshness. Quality. Trust.</h3>
+  <h2>Our Story</h2>
+  <p style="max-width:800px;margin:auto;">
+    SAWAD was born in Panipat with one mission — to deliver fresh, premium bakery products.
+    From cakes to breads, everything is baked daily with care and quality ingredients.
+  </p>
+  <p style="max-width:800px;margin:20px auto;">
+    We believe food is not just taste, it is an experience. Every bite should feel special.
+  </p>
+  <h3 style="color:#6b3e26;">Freshness. Quality. Trust.</h3>
 </section>
 
 <!-- CONTACT -->
 <section class="contact fade">
-<h2>Contact Us</h2>
-
-<div class="contact-container">
-
-<div>
-<h3>Visit</h3>
-<p>📍 Panipat, Haryana</p>
-
-<h3>Call</h3>
-<p>📞 +91 8809833410</p>
-
-<a href="https://wa.me/918809833410" target="_blank" class="whatsapp-btn">
-Order on WhatsApp
-</a>
-</div>
-
-<div>
-<iframe src="https://maps.google.com/maps?q=Panipat&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300"></iframe>
-</div>
-
-</div>
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+    <div>
+      <h3>Visit</h3>
+      <p>📍 Panipat, Haryana</p>
+      <h3>Call</h3>
+      <p>📞 +91 8809833410</p>
+      <a href="https://wa.me/918809833410" target="_blank" class="whatsapp-btn">
+        Order on WhatsApp
+      </a>
+    </div>
+    <div>
+      <iframe src="https://maps.google.com/maps?q=Panipat&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="300"></iframe>
+    </div>
+  </div>
 </section>
 
 <script>
-
 const products = [
-{name:"Chocolate Cake",price:650,cat:"cake",img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587"},
-{name:"Red Velvet Cake",price:700,cat:"cake",img:"https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7"},
-{name:"Cheesecake",price:300,cat:"cake",img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187"},
+  {name:"Chocolate Cake",price:650,cat:"cake",img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587"},
+  {name:"Red Velvet Cake",price:700,cat:"cake",img:"https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7"},
+  {name:"Cheesecake",price:300,cat:"cake",img:"https://images.unsplash.com/photo-1565958011703-44f9829ba187"},
 
-{name:"Bread",price:85,cat:"bread",img:"https://images.unsplash.com/photo-1509440159596-0249088772ff"},
-{name:"Garlic Bread",price:120,cat:"bread",img:"https://images.unsplash.com/photo-1608198093002-ad4e005484ec"},
-{name:"Croissant",price:110,cat:"bread",img:"https://images.unsplash.com/photo-1555507036-ab1f4038808a"},
+  {name:"Bread",price:85,cat:"bread",img:"https://images.unsplash.com/photo-1509440159596-0249088772ff"},
+  {name:"Garlic Bread",price:120,cat:"bread",img:"https://images.unsplash.com/photo-1608198093002-ad4e005484ec"},
+  {name:"Croissant",price:110,cat:"bread",img:"https://images.unsplash.com/photo-1555507036-ab1f4038808a"},
 
-{name:"Donut",price:60,cat:"snack",img:"https://images.unsplash.com/photo-1551024601-bec78aea704b"},
-{name:"Cookies",price:250,cat:"snack",img:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35"},
-{name:"Brownie",price:150,cat:"snack",img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c"},
-{name:"Muffin",price:70,cat:"snack",img:"https://images.unsplash.com/photo-1587668178277-295251f900ce"},
-{name:"Sandwich",price:180,cat:"snack",img:"https://images.unsplash.com/photo-1550317138-10000687a72b"},
-{name:"Pizza Bread",price:200,cat:"snack",img:"https://images.unsplash.com/photo-1594007654729-407eedc4be65"}
+  {name:"Donut",price:60,cat:"snack",img:"https://images.unsplash.com/photo-1551024601-bec78aea704b"},
+  {name:"Cookies",price:250,cat:"snack",img:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35"},
+  {name:"Brownie",price:150,cat:"snack",img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c"},
+  {name:"Muffin",price:70,cat:"snack",img:"https://images.unsplash.com/photo-1587668178277-295251f900ce"},
+  {name:"Sandwich",price:180,cat:"snack",img:"https://images.unsplash.com/photo-1550317138-10000687a72b"},
+  {name:"Pizza Bread",price:200,cat:"snack",img:"https://images.unsplash.com/photo-1594007654729-407eedc4be65"}
 ];
 
-let cart=[];
-let total=0;
+let cart = [];
+let total = 0;
 
-function displayProducts(list){
-  const container=document.getElementById("product-list");
-  container.innerHTML="";
-  list.forEach(p=>{
-    container.innerHTML+=`
+function displayProducts(list) {
+  const container = document.getElementById("product-list");
+  container.innerHTML = "";
+  list.forEach(p => {
+    container.innerHTML += `
     <div class="card fade">
       <img src="${p.img}">
       <h3>${p.name}</h3>
@@ -232,35 +192,54 @@ function displayProducts(list){
 
 displayProducts(products);
 
-function filterItems(cat){
-  if(cat==="all") displayProducts(products);
-  else displayProducts(products.filter(p=>p.cat===cat));
+function filterItems(cat) {
+  if (cat === "all") displayProducts(products);
+  else displayProducts(products.filter(p => p.cat === cat));
 }
 
-function addToCart(name,price){
-  cart.push({name,price});
-  total+=price;
-  let li=document.createElement("li");
-  li.innerText=name+" ₹"+price;
+function addToCart(name, price) {
+  cart.push({name, price});
+  total += price;
+  let li = document.createElement("li");
+  li.innerText = name + " ₹" + price;
   document.getElementById("cart-items").appendChild(li);
-  document.getElementById("total").innerText=total;
+  document.getElementById("total").innerText = total;
 }
 
-function sendToWhatsApp(){
-  let msg="Order:%0A";
-  cart.forEach((c,i)=>{
-    msg+=`${i+1}. ${c.name} - ₹${c.price}%0A`;
+function sendToWhatsApp() {
+  let msg = "Order:%0A";
+  cart.forEach((c, i) => {
+    msg += `${i+1}. ${c.name} - ₹${c.price}%0A`;
   });
-  msg+=`Total ₹${total}`;
+  msg += `Total ₹${total}`;
   window.open(`https://wa.me/918809833410?text=${msg}`);
 }
 
-function animate(){
-  document.querySelectorAll(".fade").forEach(el=>{
-    setTimeout(()=>el.classList.add("show"),100);
+function animate() {
+  document.querySelectorAll(".fade").forEach(el => {
+    setTimeout(() => el.classList.add("show"), 100);
   });
 }
+</script>
 
+<!-- VOICEFLOW CHATBOT -->
+<script type="text/javascript">
+  (function(d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: '69f1138afd7b7157414fa824' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        voice: {
+          url: "https://runtime-api.voiceflow.com"
+        }
+      });
+    }
+    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
 
 </body>
